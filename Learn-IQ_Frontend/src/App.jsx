@@ -13,6 +13,10 @@ import UpdateTest from "./pages/admin/UpdateTest";
 import DeleteTest from "./pages/admin/DeleteTest";
 import ManageQuestionBank from "./pages/admin/ManageQuestionBank";
 import AssignQuestions from "./pages/admin/AssignQuestions";
+import StartTest from "./pages/student/StartTest";
+import TestHistory from "./pages/student/TestHistory";
+import RequestTest from "./pages/student/RequestTest";
+import StudentRequests from "./pages/student/StudentRequests";
 
 function App() {
   return (
@@ -33,6 +37,13 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/rankings" element={<Rankings />} />
         <Route path="/student-requests" element={<StudentRequests />} /> */}
+
+
+        {/* StudentRoutes */}
+        <Route path="/start-test/:id" element={<StartTest/>}/>
+        <Route path="/test-history" element={<TestHistory/>}/>
+        <Route path="/request-test" element={<RequestTest/>}/>
+        <Route path="/my-requests" element={<StudentRequests/>}/>
       </Routes>
     </>
   );
