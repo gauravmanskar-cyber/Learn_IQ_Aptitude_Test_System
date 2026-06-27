@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+
+  mysql:
+    image: mysql:8.4
+    container_name: mysql-db
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: learniqbackend   # ← Change kiya
+
+    ports:
+      - "3307:3306"
+
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+  backend:
+    build: ./LearnIQ_Backend
+    container_name: springboot-api
+
+    ports:
+      - "9090:9090"
+
+    depends_on:
+      - mysql
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/learniqbackend  
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  frontend:
+    build: ./Learn-IQ_Frontend
+    container_name: react-ui
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+volumes:
+  mysql-data:
