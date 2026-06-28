@@ -23,7 +23,7 @@ const RequestTest = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:9090/request-test/send",
+        "https://learn-iq-backend.onrender.com/request-test/send",
         formData,
         {
           headers: {

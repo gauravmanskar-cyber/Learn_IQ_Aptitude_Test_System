@@ -30,7 +30,7 @@ const UpdateTest = () => {
     try {
 
       const response = await axios.get(
-        `http://localhost:9090/tests/${id}`,
+        `https://learn-iq-backend.onrender.com/tests/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -66,7 +66,7 @@ const UpdateTest = () => {
     try {
 
       await axios.put(
-        `http://localhost:9090/tests/update/${id}`,
+        `https://learn-iq-backend.onrender.com/tests/update/${id}`,
         testData,
         {
           headers: {

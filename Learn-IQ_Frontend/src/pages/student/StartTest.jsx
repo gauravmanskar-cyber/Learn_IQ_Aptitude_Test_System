@@ -19,7 +19,7 @@ const StartTest = () => {
 
   const fetchTest = async () => {
     try {
-      const response = await axios.get(`http://localhost:9090/tests/${id}`);
+      const response = await axios.get(`https://learn-iq-backend.onrender.com/tests/${id}`);
 
       setTest(response.data);
     } catch (error) {
@@ -50,7 +50,7 @@ const StartTest = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:9090/attempt/submit-test",
+        "https://learn-iq-backend.onrender.com/attempt/submit-test",
         payload,
         {
           headers: {

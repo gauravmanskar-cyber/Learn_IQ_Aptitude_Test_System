@@ -25,7 +25,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:9090/auth/login",
+        "https://learn-iq-backend.onrender.com/auth/login",
         formData
       );
 

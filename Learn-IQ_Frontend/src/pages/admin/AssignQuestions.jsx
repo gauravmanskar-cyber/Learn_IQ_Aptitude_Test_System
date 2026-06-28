@@ -30,7 +30,7 @@ const AssignQuestions = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:9090/tests/getall",
+        "https://learn-iq-backend.onrender.com/tests/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -53,7 +53,7 @@ const AssignQuestions = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:9090/questions/getall",
+        "https://learn-iq-backend.onrender.com/questions/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -119,7 +119,7 @@ const AssignQuestions = () => {
       console.log(payload);
 
       await axios.post(
-        "http://localhost:9090/test-question/assign",
+        "https://learn-iq-backend.onrender.com/test-question/assign",
         payload,
         {
           headers: {

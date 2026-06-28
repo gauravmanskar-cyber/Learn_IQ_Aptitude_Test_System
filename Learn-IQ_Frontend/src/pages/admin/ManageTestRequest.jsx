@@ -22,7 +22,7 @@ const ManageTestRequest = () => {
   const fetchRequests = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9090/request-test/getall",
+        "https://learn-iq-backend.onrender.com/request-test/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -39,7 +39,7 @@ const ManageTestRequest = () => {
   const fetchTests = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9090/tests/getall",
+        "https://learn-iq-backend.onrender.com/tests/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -56,7 +56,7 @@ const ManageTestRequest = () => {
   const approveRequest = async (id) => {
     try {
       await axios.put(
-        `http://localhost:9090/request-test/${id}/approve`,
+        `https://learn-iq-backend.onrender.com/request-test/${id}/approve`,
         {},
         {
           headers: {
@@ -74,7 +74,7 @@ const ManageTestRequest = () => {
   const rejectRequest = async (id) => {
     try {
       await axios.put(
-        `http://localhost:9090/request-test/${id}/reject`,
+        `https://learn-iq-backend.onrender.com/request-test/${id}/reject`,
         {},
         {
           headers: {
@@ -92,7 +92,7 @@ const ManageTestRequest = () => {
   const scheduleRequest = async () => {
     try {
       await axios.put(
-        `http://localhost:9090/request-test/${selectedRequestId}/schedule`,
+        `https://learn-iq-backend.onrender.com/request-test/${selectedRequestId}/schedule`,
         {
           testId: selectedTestId,
           scheduledDate,

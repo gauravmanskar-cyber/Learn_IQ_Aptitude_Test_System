@@ -33,7 +33,7 @@ const AddTest = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:9090/tests/add",
+        "https://learn-iq-backend.onrender.com/tests/add",
         finalData,
         {
           headers: {

@@ -41,7 +41,7 @@ const ManageQuestionBank = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:9090/questions/getall",
+        "https://learn-iq-backend.onrender.com/questions/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -85,7 +85,7 @@ const ManageQuestionBank = () => {
       if (editId !== null) {
 
         await axios.put(
-          `http://localhost:9090/questions/update/${editId}`,
+          `https://learn-iq-backend.onrender.com/questions/update/${editId}`,
           questionData,
           {
             headers: {
@@ -100,7 +100,7 @@ const ManageQuestionBank = () => {
 
         // ADD
         await axios.post(
-          "http://localhost:9090/questions/add",
+          "https://learn-iq-backend.onrender.com/questions/add",
           questionData,
           {
             headers: {
@@ -145,7 +145,7 @@ const ManageQuestionBank = () => {
     try {
 
       await axios.delete(
-        `http://localhost:9090/questions/delete/${id}`,
+        `https://learn-iq-backend.onrender.com/questions/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

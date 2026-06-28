@@ -15,7 +15,7 @@ const TestHistory = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:9090/attempt/history",
+        "https://learn-iq-backend.onrender.com/attempt/history",
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -25,7 +25,7 @@ function RegistrationForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:9090/auth/registration",
+        "https://learn-iq-backend.onrender.com/auth/registration",
         formData
       );
 

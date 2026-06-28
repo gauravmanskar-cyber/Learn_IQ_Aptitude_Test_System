@@ -11,7 +11,7 @@ function Rankings() {
   const fetchRankings = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:9090/attempt/rankings",
+        "https://learn-iq-backend.onrender.com/attempt/rankings",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

@@ -17,7 +17,7 @@ const DeleteTest = () => {
     try {
 
       const response = await axios.get(
-        "http://localhost:9090/tests/getall",
+        "https://learn-iq-backend.onrender.com/tests/getall",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -49,7 +49,7 @@ const DeleteTest = () => {
     try {
 
       await axios.delete(
-        `http://localhost:9090/tests/delete/${id}`,
+        `https://learn-iq-backend.onrender.com/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

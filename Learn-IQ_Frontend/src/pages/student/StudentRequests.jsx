@@ -13,7 +13,7 @@ const StudentRequests = () => {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:9090/request-test/my-requests",
+        "https://learn-iq-backend.onrender.com/request-test/my-requests",
         {
           headers: {
             Authorization: `Bearer ${token}`,

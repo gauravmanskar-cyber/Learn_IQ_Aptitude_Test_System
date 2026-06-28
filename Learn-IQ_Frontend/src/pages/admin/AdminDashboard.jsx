@@ -22,7 +22,7 @@ export function AdminDashboard() {
 
   const fetchTests = async () => {
     try {
-      const response = await axios.get("http://localhost:9090/tests/getall", {
+      const response = await axios.get("https://learn-iq-backend.onrender.com/tests/getall", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
